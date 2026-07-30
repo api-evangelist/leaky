@@ -1,19 +1,55 @@
 aid: leaky
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/leaky.png
 name: Leaky
-description: Leaky is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Leaky was a US auto-insurance comparison service that operated from 2011
+  until 31 August 2013. It let consumers compare prices and plans across the nation's
+  top insurers, model "what if" coverage scenarios, and keep all of their policy information
+  in one place with alerts when they could save money. The comparison engine was built
+  by reverse-engineering the pricing models of more than 100 insurers from publicly-available
+  government filings rather than by selling user information to carriers. Leaky reported
+  providing over $300 million of auto-insurance quotes and saving its users more than
+  $40 million before it wound down the consumer business; its commercial-insurance
+  business was acquired by Navion Insurance. The company was backed by 500 Global (500
+  Startups). Leaky is defunct — leaky.com now serves only a static shutdown notice,
+  all user data was deleted at closure, and there is no developer portal, public API,
+  SDK, or discovery surface to catalog.
 url: https://raw.githubusercontent.com/api-evangelist/leaky/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - 500-global
 x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier-reason: defunct-no-api-surface
+x-status: defunct
+x-status-detail: Consumer auto-insurance comparison operations ceased 2013-08-31; commercial-insurance
+  business acquired by Navion Insurance. Verified 2026-07-19 — leaky.com returns 200
+  on / only, 404 on every other path.
+x-founded: '2011'
+x-shutdown: '2013-08-31'
+x-acquirer: Navion Insurance
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Insurance
+- InsurTech
+- Auto Insurance
+- Insurance Comparison
+- Price Comparison
+- Consumer Finance
+- Defunct
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +59,12 @@ maintainers:
 common:
 - type: Website
   url: https://leaky.com
+- type: DomainSecurity
+  url: security/leaky-domain-security.yml
+- type: LLMsTxt
+  url: llms/leaky-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

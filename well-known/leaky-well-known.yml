@@ -1,0 +1,44 @@
+generated: '2026-07-19'
+method: probed
+source: live HTTP probes of https://leaky.com (the only host this provider still serves)
+note: >-
+  No /.well-known/ discovery surface is published. Leaky ceased operations on
+  2013-08-31 and the domain now serves a single static shutdown page; every
+  discovery path and every historical site path returns 404. Absence recorded
+  as valid data — no WellKnown or SecurityTxt pointer is wired in apis.yml
+  because there is nothing published to point at.
+host: https://leaky.com
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /llms.txt
+  status: 404
+- path: /robots.txt
+  status: 404
+site_paths:
+- path: /
+  status: 200
+- path: /about/
+  status: 404
+- path: /blog/
+  status: 404
+- path: /contact/
+  status: 404
+- path: /terms/
+  status: 404
+- path: /privacy/
+  status: 404
+- path: /login/
+  status: 404
+subdomains:
+- host: commercial.leaky.com
+  status: nxdomain
+  note: linked from the shutdown page as the surviving commercial-insurance business; DNS no longer resolves

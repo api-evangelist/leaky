@@ -1,0 +1,40 @@
+# Leaky
+
+> Leaky was a US auto-insurance comparison service that operated from 2011 until
+> 31 August 2013. It let consumers compare prices and plans across the nation's
+> top insurers, model coverage scenarios, and monitor their policies for savings.
+> The comparison engine was built by reverse-engineering the pricing models of
+> more than 100 insurers from publicly-available government filings. Leaky ceased
+> auto-insurance operations on 2013-08-31 and its commercial-insurance business
+> was acquired by Navion Insurance. The company was backed by 500 Global
+> (500 Startups).
+
+## Status
+
+- DEFUNCT. leaky.com serves a single static shutdown notice; all other paths return 404.
+- No developer portal, no public API, no SDKs, no documentation, and no /.well-known/ surface exist.
+- All user data and account information was deleted at shutdown.
+- The commercial.leaky.com property linked from the shutdown page no longer resolves.
+
+## Reported outcomes (as published on the shutdown notice)
+
+- Over $300 million of auto-insurance quotes provided
+- Over $40 million saved for users
+- Over 8 years of user time saved comparing policies
+- A cease-and-desist received roughly every two months, on average
+
+## Links
+
+- [Leaky (shutdown notice)](https://leaky.com): the only page the domain still serves
+- [API Evangelist profile](https://raw.githubusercontent.com/api-evangelist/leaky/refs/heads/main/apis.yml): this APIs.json profile
+
+## Artifacts in this profile
+
+- [Domain security](security/leaky-domain-security.yml): probed TLS/HSTS/DNSSEC/CAA/SPF/DMARC posture
+- [Well-known probe](well-known/leaky-well-known.yml): recorded absence of any discovery surface
+
+## Notes for agents
+
+There is no Leaky API to call. Do not attempt to construct endpoints, keys, or
+integrations for this provider. This profile exists as a historical record of a
+defunct company in the insurance-comparison space.
